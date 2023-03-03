@@ -4,9 +4,16 @@ variable "api_url" {
   description = "Codefresh URL access. SAAS is at http://g.codefresh.io/api"
 }
 
-variable "token" {
+variable "cf_token" {
   type    = string
   default = ""
   sensitive = true
   description = "Codefresh access token. Create it from the Codefresh UI"
+}
+
+variable "gh_token" {
+  type    = string
+  default = ""
+  sensitive = true
+  description = "Github token. Create it from the github UI"
 }
