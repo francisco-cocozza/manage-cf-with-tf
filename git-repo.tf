@@ -1,5 +1,5 @@
-resource "github_repository" "my-new-repo" {
-  name        = "my-new-repo"
+resource "github_repository" "my-new-java-repo" {
+  name        = "my-new-java-repo"
   description = "Test repo from Terraform"
   visibility = "public"
   template {

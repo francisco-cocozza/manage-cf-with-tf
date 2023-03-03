@@ -21,10 +21,3 @@ provider "github" {
   token = var.gh_token # or `GITHUB_TOKEN`
 }
 
-resource "codefresh_project" "test" {
-  name = "myproject"
-
-  tags = [
-    "docker",
-  ]
-}

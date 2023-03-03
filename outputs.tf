@@ -1,3 +1,11 @@
-output "id" {
-  value = codefresh_project.test.id
+output "project_id" {
+  value = codefresh_project.example-project.id
+}
+
+output "pipeline_id" {
+  value = codefresh_pipeline.example-pipeline.id
+}
+
+output "repo_name" {
+  value = github_repository.my-new-java-repo.full_name
 }
