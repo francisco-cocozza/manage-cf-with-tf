@@ -17,3 +17,10 @@ variable "gh_token" {
   sensitive = true
   description = "Github token. Create it from the github UI"
 }
+
+variable "my_app_name" {
+  type    = string
+  default = "my-java-app"
+  sensitive = false
+  description = "Name of application to be created. Affects Git repo and pipeline names"
+}

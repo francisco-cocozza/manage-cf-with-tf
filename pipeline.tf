@@ -11,7 +11,7 @@ resource "codefresh_pipeline" "example-pipeline" {
 
 
 
-  name    = "${codefresh_project.example-project.name}/build-java-app"
+  name    = "${codefresh_project.example-project.name}/build-${github_repository.my-new-java-repo.name}"
 
   tags = [
     "production",
