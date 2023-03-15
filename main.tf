@@ -2,7 +2,7 @@ terraform {
   required_providers {
     codefresh = {
       source = "codefresh-io/codefresh"
-      version = "0.2.0"
+      version = "0.3.1"
     }
     github = {
       source  = "integrations/github"
@@ -13,8 +13,8 @@ terraform {
 
 
 provider "codefresh" {
-  api_url = var.api_url
-  token = var.cf_token
+  api_url = var.api_url # or `CODEFRESH_API_URL`
+  token = var.cf_token # or `CODEFRESH_API_KEY`
 }
 
 provider "github" {
