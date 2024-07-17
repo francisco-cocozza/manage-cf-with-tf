@@ -11,7 +11,7 @@ resource "codefresh_pipeline" "example-pipeline" {
 
 
 
-  name    = "${codefresh_project.example-project.name}/build"
+  name    = "${codefresh_project.example-project.name}/my-pipeline"
 
 
   spec {
