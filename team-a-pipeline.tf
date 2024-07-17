@@ -11,19 +11,14 @@ resource "codefresh_pipeline" "example-pipeline" {
 
 
 
-  name    = "${codefresh_project.example-project.name}/build-${github_repository.my-new-java-repo.name}"
+  name    = "team A/build"
 
-  tags = [
-    "production",
-    "docker",
-    "terraform-gen"
-  ]
 
   spec {
 
 
     spec_template {
-      repo        = "kostis-codefresh/${github_repository.my-new-java-repo.name}"
+      repo        = "kostis-codefresh/my-repo"
       path        = "./codefresh.yml"
       revision    = "main"
       context     = "github-1"
@@ -40,7 +35,7 @@ resource "codefresh_pipeline" "example-pipeline" {
       ]
       modified_files_glob = ""
       name                = "commits"
-      repo                = "kostis-codefresh/${github_repository.my-new-java-repo.name}"
+      repo                = "kostis-codefresh/my-repo"
       type                = "git"
     }
 
