@@ -26,7 +26,7 @@ resource "codefresh_pipeline" "example-pipeline" {
 
 
     trigger {
-      branch_regex  = "/.*/gi"
+      branch_regex  = "/main/gi"
       context       = "github-1"
       description   = "Trigger for commits"
       disabled      = false
